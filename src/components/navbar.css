@@ -1,0 +1,116 @@
+.navbarItems{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    font-size: 1.2rem;
+    background-color: #222;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    width: 95%;
+    height: 80px;
+    border-radius: 13px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.logo{
+    color: white;
+    justify-self: start;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.fa-react{
+    color: white;
+    margin-left: 5px;
+}
+.nav-menu{
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 15px;
+    list-style-type: none;
+    align-items: center;
+    text-align: center;
+    justify-content: end;
+}
+.nav-links{
+    text-decoration: none;
+    color: white;
+    padding: 0.7rem 1rem;
+    white-space: nowrap;
+}
+.nav-links i{
+    padding-right: 10px;
+}
+.nav-links:hover{
+    background-color: rgb(80, 80, 238);
+    border-radius: 6px;
+    transform: all 0.2s ease-in-out;
+}
+.fa-bars, .fa-times{
+    color: white;
+    font-size: 1.6rem;
+}
+.nav-menubar{
+    display: none;
+}
+.nav-links-mobile{
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    background-color: #fafafa;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+    color: #222;
+}
+
+@media only screen and (max-width: 850px) {
+    .navbarItems{
+        z-index: 99;
+    }
+    .nav-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px rgba(31, 38, 135, .37);
+        backdrop-filter: blur(4px);
+        border-radius: 13px;
+        height: auto;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: -110%;
+        align-items: stretch;
+        padding: 80px 0 30px 0;
+        margin: 0;
+        z-index: -1;
+        transition: all 0.3s ease-in-out;
+    }
+    .nav-menu.active{
+        left: 0;
+    }
+    .nav-links{
+        display: block;
+        width: 100%;
+        padding: 2rem 0;
+        color: #222;
+    }
+    .nav-links:hover{
+        background-color: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(20px);
+    }
+    .nav-menubar{
+        display: block;
+    }
+    .nav-links-mobile{
+        padding: 1.5rem;
+        display: block;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.3rem;
+        width: 80%;
+        margin: auto;
+    }
+  }
